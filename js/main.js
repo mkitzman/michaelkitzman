@@ -9,12 +9,12 @@ window.onresize = function(event) {
 }
 
 function resizeDiv() {
-    console.log('resizing');
 
     vpw = $(window).width();
     vph = $(window).height();
 
     $('.screen-size').css({'height': vph + 'px'});
+    
 }
 
 function showCard() {
