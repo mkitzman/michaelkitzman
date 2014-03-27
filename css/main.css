@@ -5,7 +5,7 @@ body {
 }
 
 .main {
-    background: url(../img/milkyway.jpg) no-repeat 0 0;
+    background: url(../img/build/milkyway.jpg) no-repeat 0 0;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     background-size: cover;
