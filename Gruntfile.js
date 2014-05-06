@@ -35,6 +35,15 @@ module.exports = function(grunt) {
                 dest: 'js/build/production.js'
             }
         },
+        phantomas: {
+            gruntSite : {
+                options : {
+                    indexPath : './phantomas/',
+                    options   : {},
+                    url       : 'http://michaelkitzman.com/'
+                }
+            }
+        },
         imagemin: {
             dynamic: {
                 files: [{
@@ -50,10 +59,11 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-yslow');
     grunt.loadNpmTasks('grunt-contrib-concat');
     grunt.loadNpmTasks('grunt-contrib-uglify');
+    grunt.loadNpmTasks('grunt-phantomas');
     //grunt.loadNpmTasks('grunt-contrib-imagemin');
 
     // Default task(s).
     //grunt.registerTask('default', ['concat', 'uglify', 'imagemin', 'yslow']);
-    grunt.registerTask('default', ['concat', 'uglify', 'yslow']);
+    grunt.registerTask('default', ['phantomas', 'concat', 'uglify', 'yslow']);
 
 };

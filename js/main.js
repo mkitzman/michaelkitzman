@@ -1,8 +1,8 @@
 //Ensure Main Content takes entire screen
-$(document).ready(function(){
+//$(document).ready(function(){
     resizeDiv();
     showCard();
-});
+//});
 
 window.onresize = function(event) {
     resizeDiv();
@@ -20,6 +20,7 @@ function resizeDiv() {
 function showCard() {
 
     $('.profile-card').addClass("show");
+    $('.icon-arrow-down').addClass("show");
 
 }
 

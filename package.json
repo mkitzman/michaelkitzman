@@ -8,6 +8,7 @@
     "grunt-contrib-uglify": "^0.4.0",
     "grunt-yslow": "0.0.3",
     "grunt-contrib-concat": "^0.3.0",
-    "grunt-contrib-imagemin": "^0.5.0"
+    "grunt-contrib-imagemin": "^0.5.0",
+    "grunt-phantomas": "^0.5.2"
   }
 }
