@@ -1,12 +1,12 @@
 //Ensure Main Content takes entire screen
 //$(document).ready(function(){
-    resizeDiv();
+    //resizeDiv();
     showCard();
 //});
 
-window.onresize = function(event) {
-    resizeDiv();
-}
+// window.onresize = function(event) {
+//     resizeDiv();
+// }
 
 function resizeDiv() {
 

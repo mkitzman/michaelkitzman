@@ -5,11 +5,12 @@ body {
 }
 
 .main {
-    background: url(../img/build/milkyway.jpg) no-repeat 0 0;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    background-size: cover;
     position: relative;
+    height: 100vh;
+    background-attachment: fixed;
+    background-position: top center;
+    background-size: cover;
+    background: url(../img/build/milkyway.jpg) no-repeat 0 0;
 }
 
 .profile-card {
