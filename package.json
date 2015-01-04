@@ -1,14 +1,36 @@
 {
-  "name": "michaelkitzman.com",
+  "name": "michaelkitzman",
+  "description": "Personal Site for Michael Kitzman.",
   "version": "0.1.0",
+  "keywords": [
+    "css",
+    "less",
+    "responsive",
+    "front-end",
+    "framework",
+    "web"
+  ],
+  "homepage": "http://michaelkitzman.com",
+  "author": "Michael Kitzman",
+  "scripts": {
+    "test": "grunt test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mkitzman/michaelkitzman.git"
+  },
+  "license": {
+    "type": "MIT",
+    "url": "https://github.com/twbs/bootstrap/blob/master/LICENSE"
+  },
   "devDependencies": {
-    "grunt": "^0.4.4",
-    "grunt-contrib-jshint": "~0.6.3",
-    "grunt-contrib-nodeunit": "~0.2.0",
-    "grunt-contrib-uglify": "^0.4.0",
-    "grunt-yslow": "0.0.3",
-    "grunt-contrib-concat": "^0.3.0",
-    "grunt-contrib-imagemin": "^0.5.0",
-    "grunt-phantomas": "^0.5.2"
+    "grunt": "~0.4.5",
+    "grunt-autoprefixer": "^2.1.0",
+    "grunt-contrib-concat": "~0.3.0",
+    "grunt-contrib-cssmin": "^0.11.0",
+    "grunt-contrib-imagemin": "~0.4.0",
+    "grunt-contrib-sass": "~0.6.0",
+    "grunt-contrib-uglify": "~0.2.7",
+    "grunt-contrib-watch": "~0.5.3"
   }
 }

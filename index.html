@@ -1,54 +1,143 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
     <head>
         <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-        <title>Michael Kitzman</title>
-        <meta name="description" content="Front End Engineer working for Yahoo Sports">
-        <meta name="viewport" content="initial-scale=1,width = device-width">
-        <meta property="og:site_name" content="Michael Kitzman">
-        <meta property="og:title" content="Michael Kitzman - Front End Engineer working for Yahoo Sports">
-        <meta property="og:type" content="website">
-        <meta property="og:url" content="http://michaelkitzman.com">
-        <meta property="og:description" content="Personal website for Michael Kitzman">
-        <meta property="og:image" content="http://michaelkitzman.com/img/build/mkitzman.jpeg">
-        <link rel="stylesheet" href="css/main.css">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="Personal site for Michael Kitzman">
+        <meta name="author" content="Michael Kitzman">
+        <link rel="icon" href="assets/img/favicon.ico">
+
+        <title>Michael Kitzman - Front-end Engineer</title>
+
+        <!-- Bootstrap core CSS -->
+        <link href="assets/dist/michaelkitzman.css" rel="stylesheet">
+
+        <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+        <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+        <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+        <![endif]-->
     </head>
     <body>
-        <section class="main screen-size">
-            <div class="profile-card">
-                <h1>Michael Kitzman</h1>
-                <h4>Front End Engineer, Yahoo Fantasy Sports</h4>
-
-                <ul class="external-links">
-                    <li><a href="https://github.com/mkitzman" class="icon-github"></a></li>
-                    <li><a href="http://www.linkedin.com/in/michaelkitzman" class="icon-linkedin"></a></li>
-                    <li><a href="https://twitter.com/dunkfu" class="icon-twitter"></a></li>
-                </ul>
-
-
+        <nav class="navbar navbar-inverse navbar-fixed-top">
+            <div class="container">
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="#">Michael Kitzman</a>
+                </div>
+                <div id="navbar" class="navbar-collapse collapse">
+                    <div class="navbar-right">
+                        Nav!
+                    </div>
+                </div>
             </div>
-            <span class="icon-arrow-down"></a>
-        </section>
+        </nav>
 
-        <section class="info">
-            <p>Hi, my name is Mike and I am a Front End Engineer based in the San Francisco Bay area. I 
-            work for Yahoo! Sports, the number one Sports site on the internet 
-            with more than 40 million unique visitors a month. I have over 15 years 
-            of web development experience building and maintaining high transaction web 
-            sites that have been viewed by billions of people.</p>
-            <img src="img/build/mkitzman.jpeg" alt="Michael Kitzman">
-        </section>    
+        
+        <div class="jumbotron">
+            <div class="container">
+                <h1>Hi!</h1>
+                <p>I am a Front-End Engineer with over 15 years of experience building web sites that have been viewed by billions of people. I primarily work with HTML, CSS and JavaScript.</p>
+                <p><a class="btn btn-primary btn-lg" href="#" role="button">Learn more &raquo;</a></p>
+            </div>
+        </div>
 
-        <footer>
-            <small>
-                &copy; 2014 Michael Kitzman
-            </small>            
-        </footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-md">
+                    <h2>About Me</h2>
+                    <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
+                    <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <figure>
+                        <img class="screenshot" src="assets/dist/screenshot_yahoo.jpg" alt="Yahoo Fantasy Sports Screenshot" >
+                        <figcaption>
+                            <h2>Yahoo Fantasy Sports</h2>
+                            <p>At Yahoo I help build the number one Fantasy Sports website on the internet with over 50 million users a month.</p>
+                        </figcaption>
+                    </figure>
 
+                    <div class="card">
+                        <img class="screenshot" src="assets/dist/screenshot_yahoo.jpg" alt="Yahoo Fantasy Sports Screenshot" >
+                        <div class="bd">
+                            <h2>Yahoo Fantasy Sports</h2>
+                            <p>At Yahoo I help build the number one Fantasy Sports website on the internet with over 50 million users a month.</p>
+                            <p>Technologies: PHP, HTML, CSS, JavaScript, YUI, React, Flux, Grunt, Protractor, Mocha/Chai, NodeJS</p>
+                            <p><a class="btn btn-default" href="#" role="button">View site &raquo;</a></p>
+                        </div>
+                    </div>
 
-        <script src="js/vendor/modernizr-2.6.2.min.js"></script>
-        <script src="js/vendor/jquery-1.10.2.min.js"></script>
-        <script src="js/main.js"></script>
+                </div>
+                <div class="col-md-4">
+                    <div class="card">
+                        <img class="screenshot" src="assets/dist/screenshot_dunkfu.jpg" alt="Dunkfu.com screenshot" >
+                        <div class="bd">
+                            <h2>dunkfu</h2>
+                            <p>A site for NBA junkies who want to keep up with the NBA but don't want to follow a million people or blogs.</p>
+                            <p>Technologies: PHP, HTML, CSS, Feed Processing</p>
+                            <p><a class="btn btn-default" href="http://dunkfu.com" role="button">View Site &raquo;</a></p>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="col-md-4">
+                    <div class="card">
+                        <img class="screenshot" src="assets/dist/screenshot_stormdestroyer.jpg" alt="stormdestroyer.com screenshot" >
+                        <div class="bd">
+                            <h2>stormdestroyer</h2>
+                            <p>Personal Tumblr Blog</p>
+                            <p><a class="btn btn-default" href="http://stormdestroyer.com" role="button">View site &raquo;</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="card">
+                        <img class="screenshot" src="assets/dist/screenshot_lastknownphoto.jpg" alt="lastknownphoto.com screenshot" >
+                        <div class="bd">
+                            <h2>lastknownphoto</h2>
+                            <p>Last known photos of celebrities and historical figures.</p>
+                            <p><a class="btn btn-default" href="http://lastknownphotos.com" role="button">View site &raquo;</a></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card">
+                        <img class="screenshot" src="assets/dist/screenshot_gifreply.jpg" alt="gifreply screenshot" >
+                        <div class="bd">
+                            <h2>gifreply</h2>
+                            <p>Flickr powered animated gifs for online conversations</p>
+                            <p>Technologies: Express, NodeJS, JQuery, HTML, CSS, ZeroClipboard</p>
+                            <p><a class="btn btn-default" href="https://github.com/mkitzman/gifreply" role="button">View code &raquo;</a></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card">
+                        <img class="screenshot" src="assets/dist/screenshot_gifreply.jpg" alt="gifreply screenshot" >
+                        <div class="bd">
+                            <h2>michael kitzman</h2>
+                            <p>My Personal Site</p>
+                            <p>Technologies: HTML, CSS, Grunt, Sass</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <hr>
+
+            <footer>
+                <p>&copy; Michael Kitzman 2014</p>
+            </footer>
+        </div>
+
+        <script src="/assets/dist/michaelkitzman.js"></script>
     </body>
 </html>

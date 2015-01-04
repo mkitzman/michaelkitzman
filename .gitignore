@@ -1,8 +1,21 @@
-.svn/
-_site/
-build/
-pkg/
-*.swp
+# OS or Editor folders
+._*
+.cache
 .DS_Store
-node_modules/
-phantomas/
+.idea
+.project
+.settings
+.tmproj
+*.esproj
+*.sublime-project
+*.sublime-workspace
+nbproject
+Thumbs.db
+
+# grunt-html-validation
+validation-report.json
+validation-status.json
+
+# Folders to ignore
+bower_components
+node_modules
