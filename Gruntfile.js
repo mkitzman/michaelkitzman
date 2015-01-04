@@ -16,7 +16,7 @@ module.exports = function(grunt) {
         cssmin: {
             target: {
                 files: {
-                    'assets/dist/<%= pkg.name %>.css': ['assets/css/bootstrap.css', 'assets/css/site.css']
+                    'assets/dist/<%= pkg.name %>.css': ['assets/css/bootstrap.css', 'assets/css/site.css', 'assets/css/icons.css' ]
                 }
             }
         },
@@ -37,7 +37,7 @@ module.exports = function(grunt) {
               banner: '/*! <%= pkg.name %> <%= grunt.template.today("yyyy-mm-dd") %> */\n'
             },
             build: {
-                src: 'assets/js/<%= pkg.name %>.js',
+                src: 'assets/dist/<%= pkg.name %>.js',
                 dest: 'assets/dist/<%= pkg.name %>.min.js'
             }
         },

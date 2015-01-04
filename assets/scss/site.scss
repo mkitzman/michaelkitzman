@@ -1,50 +1,152 @@
 @import "bootstrap/mixins";
 
+//Common Widths
 $card_width: 300px;
+
+//Colors
 $color_shade : #E5E5E5;
+$color_dark : #333;
 
 body {
-  padding-top: 50px;
   padding-bottom: 20px;
 }
 
+nav {
+    display: none;
+}
 .jumbotron {
   background: url(milkyway_2.jpg) no-repeat 0px -300px;
   background-size: cover;
   color: #fff;
+  margin: 0;
+  padding: 100px 0;
 
 }
 
 
+.card {
+
+    box-shadow: 0px 2px 2px #333;
+    margin: auto;
+    text-align: center;
+    width: $card_width;
+    @include opacity(0);
+
+    -webkit-transition: opacity 2s ease-in-out;
+    -moz-transition: opacity 2s ease-in-out;
+    -ms-transition: opacity 2s ease-in-out;
+     -o-transition: opacity 2s ease-in-out;
+        transition: opacity 2s ease-in-out;
+
+    &.show {
+        @include opacity(1);
+    }
+
+    .bd {
+        background-color: #fff;
+        color: $color_dark;
+        padding-bottom: 1em;
+        position: relative;
+        @include border-bottom-radius(5px);
+        @include border-left-radius(5px);
+    }
+
+    .card-photo {
+        @include border-top-radius(5px);
+        @include border-right-radius(5px);
+        width: 100%;
+    }
+
+    h2, h3 {
+        margin: 0; 
+    }
+
+    h3 {
+        font-weight: 200;
+        font-size: 13px;
+        margin-top: .5em;
+    }
+    .avatar {
+        margin: -50px 0 0 0;
+        border: 3px solid #FFF;
+        @include border-radius(50%);
+    }
+
+    ul {
+        list-style-type: none;
+        margin: 1em 0 0 1em;
+        display: inline-block;
+        padding: 0;
+    }
+
+    li {
+        display: inline-block;
+        margin-right: 1em;
 
 
+        a {
+            color: $color_dark;
+        }
+    }
+}
+
+.light-header {
+    font-size: 30px;
+    font-weight: 200;
+    color: $color_dark;
+}
+
+.container-flex {
+    padding: 2em;
+}
+
+.bio {
+    padding: 0 1.3em;
+}
+.light-shade {
+    background-color: #E7E7E7;
+}
 figure {
 
     background-color: $color_shade;
-    height: 23em;
-    margin-bottom: 2em;
+    height: 24em;
+    margin: 0 auto 2em auto;
     overflow: hidden;
     position: relative;
     width: $card_width;
 
 
-    @include border-bottom-radius(5px);
-    @include border-left-radius(5px);
+
     
 
     figcaption {
+        background-color: #fff;
         padding: 0 10px 10px;
+
+        @include border-bottom-radius(5px);
+        @include border-left-radius(5px);
     }
 
 
     img {
         width: $card_width;
-        height: 200px;
         @include border-top-radius(5px);
         @include border-right-radius(5px);
     }
 
+    p {
+        font-size: 12px;
+    }
     h2 {
         font-size: 22px;
+        margin: 0;
+        padding-top: 0.5em;
     }
+}
+
+
+footer {
+    background-color: $color_dark;
+    color: #fff;
+    padding: 1em;
 }
