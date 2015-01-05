@@ -14,6 +14,7 @@ body {
 nav {
     display: none;
 }
+
 .jumbotron {
   background: url(milkyway_2.jpg) no-repeat 0px -300px;
   background-size: cover;
@@ -23,6 +24,20 @@ nav {
 
 }
 
+.fadeable {
+    
+    @include opacity(0);
+    -webkit-transition: opacity 2s ease-in-out;
+    -moz-transition: opacity 2s ease-in-out;
+    -ms-transition: opacity 2s ease-in-out;
+    -o-transition: opacity 2s ease-in-out;
+    transition: opacity 2s ease-in-out;
+
+    &.show {
+        @include opacity(1);
+    }
+}
+
 
 .card {
 
@@ -30,17 +45,6 @@ nav {
     margin: auto;
     text-align: center;
     width: $card_width;
-    @include opacity(0);
-
-    -webkit-transition: opacity 2s ease-in-out;
-    -moz-transition: opacity 2s ease-in-out;
-    -ms-transition: opacity 2s ease-in-out;
-     -o-transition: opacity 2s ease-in-out;
-        transition: opacity 2s ease-in-out;
-
-    &.show {
-        @include opacity(1);
-    }
 
     .bd {
         background-color: #fff;
@@ -102,10 +106,17 @@ nav {
 
 .bio {
     padding: 0 1.3em;
+
+    p {
+        font-size: 17px;
+    }
 }
 .light-shade {
     background-color: #E7E7E7;
 }
+
+
+
 figure {
 
     background-color: $color_shade;
@@ -114,17 +125,14 @@ figure {
     overflow: hidden;
     position: relative;
     width: $card_width;
-
-
-
-    
+    @include border-bottom-radius(5px);
+    @include border-left-radius(5px);
 
     figcaption {
         background-color: #fff;
         padding: 0 10px 10px;
+        min-height: 200px;
 
-        @include border-bottom-radius(5px);
-        @include border-left-radius(5px);
     }
 
 
