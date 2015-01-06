@@ -6,58 +6,112 @@ $card_width: 300px;
 //Colors
 $color_shade : #E5E5E5;
 $color_dark : #333;
+$color_light : #fff;
+$color_section_border : #ADA6A6;
 
-body {
-  padding-bottom: 20px;
+//Font Sizes
+$font_small : 12px;
+$font_h2    : 22px;
+
+///Mixin
+@mixin fade_in($duration) {
+    @include opacity(0);
+    -webkit-transition: opacity $duration ease-in-out;
+    -moz-transition: opacity $duration ease-in-out;
+    -ms-transition: opacity $duration ease-in-out;
+    -o-transition: opacity $duration ease-in-out;
+    transition: opacity $duration ease-in-out;
 }
 
-nav {
-    display: none;
+
+
+ul {
+    list-style-type: none;
 }
+
+.navbar,
+.navbar-fixed-bottom, 
+.navbar-fixed-top {
+    z-index: 5;
+}
+
+
+.navbar:after {
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background: $color_light;
+    content: '';
+    -webkit-transition: -webkit-transform 0.35s;
+    transition: transform 0.35s;
+    -webkit-transform: translate3d(100%,0,0);
+    transform: translate3d(100%,0,0);
+}
+
+.navbar.show:after {
+    -webkit-transform: translate3d(0,0,0);
+    transform: translate3d(0,0,0);
+}
+
 
 .jumbotron {
   background: url(milkyway_2.jpg) no-repeat 0px -300px;
   background-size: cover;
-  color: #fff;
+  color: $color_light;
   margin: 0;
   padding: 100px 0;
 
 }
 
+.container-flex h1,
+.container-flex p {
+    padding-left: 5%;
+}
+
+.projects {
+    border-top: 1px solid $color_section_border;
+    border-bottom: 1px solid $color_section_border;
+}
+
+
+
 .fadeable {
     
-    @include opacity(0);
-    -webkit-transition: opacity 2s ease-in-out;
-    -moz-transition: opacity 2s ease-in-out;
-    -ms-transition: opacity 2s ease-in-out;
-    -o-transition: opacity 2s ease-in-out;
-    transition: opacity 2s ease-in-out;
+    @include fade_in(1s);
+
 
     &.show {
         @include opacity(1);
     }
+
 }
+
+nav.fadeable {
+    @include fade_in(.5s);
+}
+
 
 
 .card {
 
-    box-shadow: 0px 2px 2px #333;
+    box-shadow: 0px 0px 1px #333;
     margin: auto;
     text-align: center;
     width: $card_width;
+    @include border-top-radius(5px);
 
     .bd {
-        background-color: #fff;
+        background-color: $color_light;
         color: $color_dark;
         padding-bottom: 1em;
         position: relative;
         @include border-bottom-radius(5px);
-        @include border-left-radius(5px);
     }
 
     .card-photo {
-        @include border-top-radius(5px);
-        @include border-right-radius(5px);
+        
         width: 100%;
     }
 
@@ -72,12 +126,18 @@ nav {
     }
     .avatar {
         margin: -50px 0 0 0;
-        border: 3px solid #FFF;
+        border: 3px solid $color_light;
         @include border-radius(50%);
+
+        &.static {
+            position: fixed;
+            top: 50px;
+            z-index: 10;
+            margin-left: -50px;
+        }
     }
 
     ul {
-        list-style-type: none;
         margin: 1em 0 0 1em;
         display: inline-block;
         padding: 0;
@@ -126,10 +186,9 @@ figure {
     position: relative;
     width: $card_width;
     @include border-bottom-radius(5px);
-    @include border-left-radius(5px);
 
     figcaption {
-        background-color: #fff;
+        background-color: $color_light;
         padding: 0 10px 10px;
         min-height: 200px;
 
@@ -139,22 +198,30 @@ figure {
     img {
         width: $card_width;
         @include border-top-radius(5px);
-        @include border-right-radius(5px);
     }
 
     p {
-        font-size: 12px;
+        font-size: $font_small;
     }
     h2 {
-        font-size: 22px;
+        font-size: $font_h2;
         margin: 0;
         padding-top: 0.5em;
     }
 }
 
+.links {
+    background-color: $color_dark;
+    color: $color_light;
+    
+    a {
+        color: $color_light;
+    }
+}
 
 footer {
-    background-color: $color_dark;
-    color: #fff;
-    padding: 1em;
+    padding: 0.5em 0 0 .5em;
+    font-size: $font_small;
+
 }
+
