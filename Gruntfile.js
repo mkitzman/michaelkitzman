@@ -16,7 +16,7 @@ module.exports = function(grunt) {
         cssmin: {
             target: {
                 files: {
-                    'assets/dist/<%= pkg.name %>.css': ['assets/css/bootstrap.css', 'assets/css/site.css', 'assets/css/icons.css' ]
+                    'assets/dist/<%= pkg.name %>.css': ['assets/css/bootstrap.css', 'assets/css/site.css', 'assets/css/fonts.css' ]
                 }
             }
         },
