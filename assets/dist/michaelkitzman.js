@@ -5,10 +5,9 @@ u[o]&&(delete u[o],c?delete n[l]:typeof n.removeAttribute!==i?n.removeAttribute(
 
 $( document ).ready(function() {
 
-    (function(){
-        "use strict";
+    "use strict";
         
-        //Fade in elements on page load
+    //Fade in elements on page load
         var fadeable_elements = document.getElementsByClassName('fadein-onload'),
             data_attribute;
 
@@ -23,7 +22,6 @@ $( document ).ready(function() {
             }
             
         }
-    }());
 
 
     var wrap = $(".avatar");

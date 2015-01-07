@@ -32,16 +32,6 @@ module.exports = function(grunt) {
             }
         },
 
-        uglify: {
-            options: {
-              banner: '/*! <%= pkg.name %> <%= grunt.template.today("yyyy-mm-dd") %> */\n'
-            },
-            build: {
-                src: 'assets/dist/<%= pkg.name %>.js',
-                dest: 'assets/dist/<%= pkg.name %>.min.js'
-            }
-        },
-
         sass: {
             dist: {
                 options: {
@@ -53,7 +43,6 @@ module.exports = function(grunt) {
                 }
             } 
         },
-
 
         watch: {
             scripts: {
@@ -72,6 +61,16 @@ module.exports = function(grunt) {
                     spawn: false,
                     livereload: true
                 }
+            }
+        },
+
+        uglify: {
+            options: {
+              banner: '/*! <%= pkg.name %> <%= grunt.template.today("yyyy-mm-dd") %> */\n'
+            },
+            build: {
+                src: 'assets/dist/<%= pkg.name %>.js',
+                dest: 'assets/dist/<%= pkg.name %>.min.js'
             }
         }
     });

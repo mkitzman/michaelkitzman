@@ -1,4 +1,5 @@
 @import "bootstrap/mixins";
+@import "_fadein.scss";
 
 //Common Widths
 $card_width: 300px;
@@ -15,15 +16,6 @@ $color_section_border : #ADA6A6;
 $font_small : 12px;
 $font_h2    : 22px;
 
-///Mixin
-@mixin fade_in($duration) {
-    @include opacity(0);
-    -webkit-transition: opacity $duration ease-in-out;
-    -moz-transition: opacity $duration ease-in-out;
-    -ms-transition: opacity $duration ease-in-out;
-    -o-transition: opacity $duration ease-in-out;
-    transition: opacity $duration ease-in-out;
-}
 
 body{
     font-family: 'ralewayregular',"Helvetica Neue",Helvetica,Arial,sans-serif;
@@ -39,6 +31,9 @@ ul {
     z-index: 5;
 }
 
+.navbar-inverse .navbar-brand {
+    color: #FFF;
+}
 
 .navbar:after {
     position: absolute;
@@ -73,12 +68,10 @@ ul {
     padding-left: 5%;
 }
 
-.projects {
+.bordered-container {
     border-top: 1px solid $color_section_border;
     border-bottom: 1px solid $color_section_border;
 }
-
-
 
 .fadeable {
     
@@ -95,7 +88,23 @@ nav.fadeable {
     @include fade_in(.5s);
 }
 
+.light-header {
+    font-size: 30px;
+    font-weight: 200;
+    color: $color_dark;
+}
 
+.light-shade {
+    background-color: #E7E7E7;
+}
+
+.bio {
+    padding: 0 1.3em;
+
+    p {
+        font-size: 17px;
+    }
+}
 
 .card {
 
@@ -103,6 +112,7 @@ nav.fadeable {
     margin: auto;
     text-align: center;
     width: $card_width;
+
     @include border-top-radius(5px);
 
     .bd {
@@ -110,6 +120,7 @@ nav.fadeable {
         color: $color_dark;
         padding-bottom: 1em;
         position: relative;
+
         @include border-bottom-radius(5px);
     }
 
@@ -127,9 +138,11 @@ nav.fadeable {
         font-size: 13px;
         margin-top: .5em;
     }
+
     .avatar {
-        margin: -50px 0 0 0;
         border: 3px solid $color_light;
+        margin: -50px 0 0 0;
+
         @include border-radius(50%);
 
         &.static {
@@ -157,24 +170,6 @@ nav.fadeable {
     }
 }
 
-.light-header {
-    font-size: 30px;
-    font-weight: 200;
-    color: $color_dark;
-}
-
-.bio {
-    padding: 0 1.3em;
-
-    p {
-        font-size: 17px;
-    }
-}
-.light-shade {
-    background-color: #E7E7E7;
-}
-
-
 
 figure {
 
@@ -184,6 +179,7 @@ figure {
     overflow: hidden;
     position: relative;
     width: $card_width;
+
     @include border-bottom-radius(5px);
 
     figcaption {
@@ -193,6 +189,11 @@ figure {
 
     }
 
+    h2 {
+        font-size: $font_h2;
+        margin: 0;
+        padding-top: 0.5em;
+    }
 
     img {
         width: $card_width;
@@ -202,11 +203,8 @@ figure {
     p {
         font-size: $font_small;
     }
-    h2 {
-        font-size: $font_h2;
-        margin: 0;
-        padding-top: 0.5em;
-    }
+
+
 }
 
 .links {

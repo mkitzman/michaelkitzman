@@ -1,0 +1,10 @@
+//Fade in
+
+@mixin fade_in($duration) {
+    @include opacity(0);
+    -webkit-transition: opacity $duration ease-in-out;
+    -moz-transition: opacity $duration ease-in-out;
+    -ms-transition: opacity $duration ease-in-out;
+    -o-transition: opacity $duration ease-in-out;
+    transition: opacity $duration ease-in-out;
+}
