@@ -1,32 +1,33 @@
+/*global document, $, window */
+
 $( document ).ready(function() {
 
     "use strict";
-        
-    //Fade in elements on page load
-        var fadeable_elements = document.getElementsByClassName('fadein-onload'),
-            data_attribute;
 
-        for (var i = 0; i < fadeable_elements.length; ++i) {
+    var avatar = $(".avatar"),
+        navbar = $(".navbar"),
+        height,
+        fadeable_elements = document.getElementsByClassName('fadein-onload'),
+        data_attribute,
+        i;
 
-            data_attribute = fadeable_elements[i].getAttribute('data-img-src');
+    //Show all elements hidden on load
+    for (i = 0; i < fadeable_elements.length; i = i + 1) {
 
-            fadeable_elements[i].classList.add('show');
-
-            if(data_attribute) {
-                fadeable_elements[i].setAttribute("src", data_attribute);
-            }
-            
+        //Swap screen shot images
+        data_attribute = fadeable_elements[i].getAttribute('data-img-src');
+        if(data_attribute) {
+            fadeable_elements[i].setAttribute("src", data_attribute);
         }
 
+        fadeable_elements[i].classList.add('show');        
+    }
 
-    var wrap = $(".avatar");
-    var navbar = $(".navbar");
-    var height;
-
+    //Scroll listener  for showing nav bar and pinning avatar
     $(window).scroll(function() {
         
         height = $(window).scrollTop();
-        console.log(height);
+
         if (height > 150) { 
             navbar.addClass("show");
         } else {
@@ -34,9 +35,9 @@ $( document ).ready(function() {
         }
 
         if (height > 275) {
-            wrap.addClass("static");
+            avatar.addClass("static");
         } else {
-            wrap.removeClass("static");
+            avatar.removeClass("static");
         }
 
     });

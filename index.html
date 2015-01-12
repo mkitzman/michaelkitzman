@@ -20,7 +20,7 @@
         <![endif]-->
     </head>
     <body>
-        <nav class="navbar navbar-inverse navbar-fixed-top fadeable">
+        <nav class="navbar navbar-inverse navbar-fixed-top fadeable" role="navigation">
             <div class="container-flex">
                 <div class="navbar-header">
                     <a class="navbar-brand" href="http://michaelkitzman.com">Mike Kitzman</a>
@@ -30,14 +30,13 @@
 
         
         <section class="jumbotron">
-
             <div class="card fadeable fadein-onload" id="profile-card">
                 <img class="card-photo" src="assets/dist/screenshot_mkitzman.jpg" alt="gifreply screenshot" >
                 <div class="bd">
                     <img class="avatar" src="assets/dist/mkitzman_sm.jpg" >
                     <h2 class="light-header">Mike Kitzman</h2>
                     <h3>Front-end Engineer</h3>
-                    <ul>
+                    <ul role="list">
                         <li><a href="https://github.com/mkitzman" class="icon-github"></a></li>
                         <li><a href="http://www.linkedin.com/in/michaelkitzman" class="icon-linkedin"></a></li>
                         <li><a href="https://twitter.com/dunkfu" class="icon-twitter"></a></li>
@@ -138,5 +137,14 @@
         </footer>
 
         <script src="assets/dist/michaelkitzman.min.js"></script>
+        <script>
+          (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+          (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+          })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+          ga('create', 'UA-190904-2', 'auto');
+          ga('send', 'pageview');
+        </script>
     </body>
 </html>
