@@ -32,6 +32,10 @@ module.exports = function(grunt) {
             }
         },
 
+        jshint: {
+            beforeconcat: ['assets/js/site.js']
+        },
+
         sass: {
             dist: {
                 options: {
@@ -83,8 +87,9 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-sass');
     grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.loadNpmTasks('grunt-autoprefixer');
+    grunt.loadNpmTasks('grunt-contrib-jshint');
 
-    grunt.registerTask('default', ['imagemin', 'sass', 'cssmin', 'concat', 'uglify']);
+    grunt.registerTask('default', ['imagemin', 'sass', 'cssmin', 'jshint', 'concat', 'uglify']);
     //grunt.registerTask('dev', ['watch']);
 
 };
